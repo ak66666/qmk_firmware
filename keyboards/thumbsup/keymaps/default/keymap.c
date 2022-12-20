@@ -279,6 +279,13 @@ void matrix_init_user() {
   steno_set_mode(STENO_MODE_BOLT); // or STENO_MODE_BOLT
 }
 
+void keyboard_post_init_user(void) {
+  // Customise these values to desired behaviour
+  //debug_enable=true;
+  //debug_matrix=true;
+  //debug_keyboard=true;
+  //debug_mouse=true;
+}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
