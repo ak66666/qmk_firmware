@@ -1,25 +1,6 @@
-// Copyright 2022 ak66666 (@ak66666)
-// SPDX-License-Identifier: GPL-2.0-or-later
-
 #pragma once
 
-/*
- * Feature disable options
- *  These options are also useful to firmware size reduction.
- */
 
-/* disable debug print */
-//#define NO_DEBUG
-
-/* disable print */
-//#define NO_PRINT
-
-/* disable action features */
-//#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
-
-//#define USE_I2C
 
 #define TAPPING_TERM 170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
 
@@ -40,4 +21,18 @@
  
 
 #define USB_POLLING_INTERVAL_MS 1
+
+
+#define POINTING_DEVICE_ROTATION_90
+#define CIRQUE_PINNACLE_TAP_ENABLE
+#define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
+#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
+
+//#define CIRQUE_PINNACLE_ATTENUATION ADC_ATTENUATE_2X
+//#define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_RELATIVE_MODE
+#define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_ABSOLUTE_MODE
+
+//#define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
+//#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
+//#define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE 
 

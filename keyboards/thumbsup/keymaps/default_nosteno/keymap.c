@@ -15,8 +15,6 @@
  */
 #include QMK_KEYBOARD_H
 
-#include "keymap_steno.h"
-
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
@@ -25,14 +23,7 @@ enum layer_names {
     _CURSORLEFT,
     _NUMBERS,
     _EXTRARIGHT,
-    _NUMPAD,
-    _PLOVER,
-    _STENO_TXBOLT,
-    // These are the same plover/txbolt layers 
-    // with the letters moved to the top two rows 
-    // and the number bar pushed down to the third row.
-    _PLOVER2,
-    _STENO_TXBOLT2
+    _NUMPAD
 };
 
 // Defines the keycodes used by our macros in process_record_user
@@ -42,13 +33,7 @@ enum custom_keycodes {
     // These three wiil work as RAISE, LOWER  and ADJUST in the original PLANCK
     CURSORRGHT = LT(_CURSORRGHT,KC_SPC),
     CURSORLEFT = LT(_CURSORLEFT,KC_SPC),
-    NUMBERS,
-    PLOVER,
-    STENO_TXBOLT,
-    PLOVER2,
-    STENO_TXBOLT2,
-    EXT_PLV,
-    EXT_PLV2
+    NUMBERS
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -175,7 +160,7 @@ without separate thumbcluster.
 
 /* ExtraRightSide (the keys from the right side which did not fit into the matrix)
  * ,-----------------------------------------------------------------------------------.
- * | Esc  |BREAK |PLOVR2|PLOVER|TxBOLT|TxBlt2|   `  |   =  |   (  |   )  |   -  |      |
+ * | Esc  |BREAK |      |      |      |      |   `  |   =  |   (  |   )  |   -  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |******|      |      |      |      |      |      |      |      |      |  '   |      |
    This is the
@@ -188,7 +173,7 @@ without separate thumbcluster.
  *               `-------------------------------------------------------'
  */
 [_EXTRARIGHT] = LAYOUT_ortho_4x12( \
-  _______, KC_BRK,  PLOVER2,  PLOVER,  STENO_TXBOLT, STENO_TXBOLT2, KC_GRV,  KC_EQL,  KC_LPRN, KC_RPRN, KC_MINS, _______, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,        KC_GRV,  KC_EQL,  KC_LPRN, KC_RPRN, KC_MINS, _______, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUOT, _______, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,       XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_BSLS, _______, \
                     _______, _______, _______, 	    _______,       _______, _______, _______, _______  \
@@ -213,70 +198,12 @@ without separate thumbcluster.
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PPLS,  KC_4,    KC_5,    KC_6,    KC_PAST, KC_PENT, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, KC_LSFT, KC_LALT, KC_RALT,  KC_1,    KC_2,    KC_3,    KC_PSLS, _______, \
                     _______, _______, _______, QWERTY,  QWERTY,   _______, KC_0,    KC_DOT	               \
-),
-
-/* Plover layer (http://opensteno.org)
-This layer remains on until EXIT key is pressed or the keyboard is reconnected.
-No other layers/modifiers to be used with it - it is self-sufficient.
-All other STENO/PLOVER layers defind below implement the same map with minor variances:
-	- TX Bolt protocol over COM port is used instead of acting as a regular keyboard.
-        - NumBar keys are moved below the alpha-keys.
-
- * ,-----------------------------------------------------------------------------------.
- * | EXIT |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |
- * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | xxxx |   S  |   T  |   P  |   H  |   *  |   *  |   F  |   P  |   L  |   T  |   D  |
- * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | xxxx |   S  |   K  |   W  |   R  |   *  |   *  |   R  |   B  |   G  |   S  |   Z  |
- * +------+------+------+------+------+------+------+------+------+------+------+------+
-		 | xxxx | xxxx |      |      ||      |      | xxxx| xxx  |
-	         +------+------+      |      ||      |      +-----+------+               
-  		               |   A  |   O  ||   E  |   U  |
-		               +------+------||------+------+
- */
-
-[_PLOVER] = LAYOUT_ortho_4x12( \
-  EXT_PLV, KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   , \
-  XXXXXXX, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
-  XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-                    XXXXXXX, XXXXXXX, KC_C,    KC_V,    KC_N,    KC_M,    XXXXXXX, XXXXXXX                    \
-),
-// The same as the one above, but the numbar moved down,
-// and the CTRLs acting as O/E, ESC - as numbar, just want to try them in those positions, 
-// like in the compact steno boards I saw on the internet.
-[_PLOVER2] = LAYOUT_ortho_4x12( \
-  EXT_PLV, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
-  XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-  KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   , \
-                    XXXXXXX, XXXXXXX, KC_C,    KC_V,    KC_N,    KC_M,    XXXXXXX, XXXXXXX                    \
-),
-
-/* Plover Layer via TX Bolt interface.
-   The layout is the same as for Plover above, just different key codes
-*/
-
-[_STENO_TXBOLT] = LAYOUT_ortho_4x12( \
-   EXT_PLV2,STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM,    STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, \
-   STN_SL,  STN_SL,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,    STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,  \
-   STN_SL,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,    STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,  \
-                     XXXXXXX, XXXXXXX, STN_A,   STN_O,      STN_E,   STN_U,   XXXXXXX, XXXXXXX                    \
- ), 
-
-/*  TX Bolt with the alpha rows moved up, numbar below them. 
-*/
-[_STENO_TXBOLT2] = LAYOUT_ortho_4x12( \
-   EXT_PLV2,STN_SL,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,    STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,  \
-   STN_SL,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,    STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,  \
-   STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM,    STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, \
-                     XXXXXXX, XXXXXXX, STN_A,   STN_O,      STN_E,   STN_U,   XXXXXXX, XXXXXXX                    \
- )
-
-
+)
 };
 
 void matrix_init_user() {
 //   persistent_default_layer_set(1UL<<_QWERTY);
-  steno_set_mode(STENO_MODE_BOLT); // or STENO_MODE_BOLT
+//  steno_set_mode(STENO_MODE_BOLT); // or STENO_MODE_BOLT
 }
 
 void keyboard_post_init_user(void) {
@@ -294,9 +221,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
      case NUMPAD:
       if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          PLAY_NOTE_ARRAY(tone_qwerty, false, 0);
-        #endif
 	layer_invert(_QWERTY);
 	layer_invert(_NUMPAD);
       }
@@ -338,8 +262,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         layer_off(_NUMBERS);
         layer_off(_EXTRARIGHT);
         layer_off(_NUMPAD);
-        layer_off(_PLOVER);
-        layer_off(_PLOVER2);
         layer_on(_QWERTY);
 
         //persistent_default_layer_set(1UL<<_QWERTY);
@@ -348,120 +270,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
       break;
 
-    case PLOVER:
-      if (record->event.pressed) {
-        layer_off(_QWERTY);
-        layer_off(_CURSORRGHT);
-        layer_off(_CURSORLEFT);
-        layer_off(_NUMBERS);
-        layer_off(_EXTRARIGHT);
-        layer_off(_NUMPAD);
-        layer_on(_PLOVER);
- 
-       if (!eeconfig_is_enabled()) {
-            eeconfig_init();
-        }
-        keymap_config.raw = eeconfig_read_keymap();
-        keymap_config.nkro = 1;
-        eeconfig_update_keymap(keymap_config.raw);
-      }
-      return false;
-      break;
-
-    case PLOVER2:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          stop_all_notes();
-          PLAY_NOTE_ARRAY(tone_plover, false, 0);
-        #endif
-        layer_off(_CURSORRGHT);
-        layer_off(_CURSORLEFT);
-        layer_off(_NUMBERS);
-        layer_off(_EXTRARIGHT);
-        layer_off(_NUMPAD);
-        layer_off(_STENO_TXBOLT);
-        layer_on(_PLOVER2);
-
-        if (!eeconfig_is_enabled()) {
-            eeconfig_init();
-        }
-        keymap_config.raw = eeconfig_read_keymap();
-        keymap_config.nkro = 1;
-        eeconfig_update_keymap(keymap_config.raw);
-
-      }
-      return false;
-      break;
-
-
-
-     case EXT_PLV:
-      if (record->event.pressed) {
-        layer_off(_PLOVER);
-        layer_on(_QWERTY);
-      }
-      return false;
-      break;
-
-    case STENO_TXBOLT:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          stop_all_notes();
-          PLAY_NOTE_ARRAY(tone_plover, false, 0);
-        #endif
-        layer_off(_CURSORRGHT);
-        layer_off(_CURSORLEFT);
-        layer_off(_NUMBERS);
-        layer_off(_EXTRARIGHT);
-        layer_off(_NUMPAD);
-        layer_off(_PLOVER);
-        layer_off(_STENO_TXBOLT2);
-        layer_on(_STENO_TXBOLT);
-       if (!eeconfig_is_enabled()) {
-            eeconfig_init();
-        }
-        keymap_config.raw = eeconfig_read_keymap();
-        keymap_config.nkro = 1;
-        eeconfig_update_keymap(keymap_config.raw);
-      }
-      return false;
-      break;
-
-    case STENO_TXBOLT2:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          stop_all_notes();
-          PLAY_NOTE_ARRAY(tone_plover, false, 0);
-        #endif
-        layer_off(_CURSORRGHT);
-        layer_off(_CURSORLEFT);
-        layer_off(_NUMBERS);
-        layer_off(_EXTRARIGHT);
-        layer_off(_NUMPAD);
-        layer_off(_PLOVER);
-        layer_off(_STENO_TXBOLT);
-        layer_on(_STENO_TXBOLT2);
-       if (!eeconfig_is_enabled()) {
-            eeconfig_init();
-        }
-        keymap_config.raw = eeconfig_read_keymap();
-        keymap_config.nkro = 1;
-        eeconfig_update_keymap(keymap_config.raw);
-      }
-      return false;
-      break;
-
-     case EXT_PLV2:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          PLAY_NOTE_ARRAY(tone_plover_gb, false, 0);
-        #endif
-        layer_off(_STENO_TXBOLT);
-        layer_off(_STENO_TXBOLT2);
-        layer_on(_QWERTY);
-      }
-      return false;
-      break;
 
  }
   return true;
