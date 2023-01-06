@@ -8,3 +8,13 @@ ProMicro pins laid out like this:
 Note in this initial revision the thumb keys are swapped in error.
 I temporarily swapped them in info.json file.
 The next revision will put in the right spots.   
+
+
+
+
+This folder contains a version with VIA support enabled.
+The STENO support is removed as there are not enough endpoints for it.
+Compile it with this keymap:
+
+	qmk compile -km default_via
+

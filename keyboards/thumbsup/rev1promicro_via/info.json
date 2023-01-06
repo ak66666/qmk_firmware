@@ -73,6 +73,8 @@
                 {"label":"/", "x":10, "y":2},
                 {"label":"Control", "x":11, "y":2},
 
+                {"label":"None", "x":0, "y":3},
+                {"label":"None", "x":1, "y":3},
                 {"label":"Win", "x":2, "y":3},
                 {"label":"Alt", "x":3, "y":3},
                 {"label":"Shift", "x":4, "y":3},
@@ -80,7 +82,9 @@
                 {"label":"Lower", "x":6, "y":3},
                 {"label":"Shift", "x":7, "y":3},
                 {"label":"Alt", "x":8, "y":3},
-                {"label":"Menu", "x":9, "y":3}
+                {"label":"Menu", "x":9, "y":3},
+                {"label":"None", "x":10, "y":3},
+                {"label":"None", "x":11, "y":3}
             ]
         }
     }
