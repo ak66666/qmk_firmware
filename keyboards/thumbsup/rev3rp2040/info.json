@@ -1,0 +1,22 @@
+{
+    "manufacturer": "Alexander (Sasha) Karmanov",
+    "keyboard_name": "Thumbs Up! v3 Split",
+    "maintainer": "ak66666",
+    "bootloader": "rp2040",
+    "features": {
+        "bootmagic": false,
+        "command": false,
+        "console": false,
+        "extrakey": false,
+        "mousekey": true,
+        "steno": true,
+        "nkro": true
+    },
+    "processor": "RP2040",
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    }
+}
