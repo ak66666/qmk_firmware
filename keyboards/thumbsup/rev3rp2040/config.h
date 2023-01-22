@@ -22,11 +22,11 @@
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 /* #define DEBOUNCE 5 */
 
-#define WS2812_PIO_USE_PIO1
+//#define WS2812_PIO_USE_PIO1
 
 #define SPLIT_TRANSPORT_MIRROR
 #define SPLIT_LAYER_STATE_ENABLE
-#define SPLIT_LED_STATE_ENABLE
+//#define SPLIT_LED_STATE_ENABLE
 #define SPLIT_MODS_ENABLE
 
 //#undef I2C_DRIVER
@@ -61,4 +61,30 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+
+
+
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500 // Timeout window in ms in which the double tap can occur.
+
+
+#define TAPPING_TERM 170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
+
+
+
+//#define RETRO_TAPPING
+//#define INGNORE_MOD_TAP_INTERRUPT
+//#undef PERMISSIVE_HOLD                                                                                                  
+//#define  PREVENT_STUCK_MODIFIERS
+
+
+#define MOUSEKEY_DELAY             150 //200
+#define MOUSEKEY_INTERVAL          60 //50
+#define MOUSEKEY_MAX_SPEED         5  //10
+#define MOUSEKEY_TIME_TO_MAX       7 //20
+#define MOUSEKEY_WHEEL_MAX_SPEED   5	//8
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
+ 
+
+#define USB_POLLING_INTERVAL_MS 1
 
