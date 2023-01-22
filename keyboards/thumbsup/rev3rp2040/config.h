@@ -4,6 +4,7 @@
 #define DIRECT_PINS_RIGHT {{GP4, GP8, GP2, GP1, GP0, GP22},    {GP3, GP7, GP29, GP28, GP27, GP26},  {GP5, GP6, GP18, GP18, GP18, GP18},  {GP24, GP25, GP19, GP20, GP20, GP20}}    
 
 //#define USE_SERIAL
+#define SERIAL_PIO_USE_PIO1 // Force the usage of PIO1 peripheral, by default the Serial implementation uses the PIO0 peripheral
 #define MASTER_RIGHT
 #define SOFT_SERIAL_PIN GP21
 
