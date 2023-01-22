@@ -10,7 +10,7 @@
         "extrakey": false,
         "mousekey": true,
         "steno": true,
-        "nkro": true
+        "nkro": false
     },
     "processor": "RP2040",
     "url": "",

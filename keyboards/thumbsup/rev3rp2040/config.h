@@ -1,14 +1,14 @@
 #pragma once
 
-#define DIRECT_PINS       {{GP15, GP14, GP13, GP12, GP7, GP9}, {GP27, GP26, GP25, GP24, GP8, GP10}, {GP18, GP18, GP18, GP18, GP6, GP11}, {GP0, GP1, GP29, GP28}}
-#define DIRECT_PINS_RIGHT {{GP4, GP8, GP2, GP1, GP0, GP34},    {GP3, GP7, GP29, GP28, GP39, GP26},  {GP5, GP6, GP18, GP18, GP18, GP18},  {GP24, GP25, GP19, GP20}}    
+#define DIRECT_PINS       {{GP15, GP14, GP13, GP12, GP7, GP9}, {GP27, GP26, GP25, GP24, GP8, GP10}, {GP18, GP18, GP18, GP18, GP6, GP11}, {GP0, GP1, GP29, GP28, GP28, GP28}}
+#define DIRECT_PINS_RIGHT {{GP4, GP8, GP2, GP1, GP0, GP22},    {GP3, GP7, GP29, GP28, GP27, GP26},  {GP5, GP6, GP18, GP18, GP18, GP18},  {GP24, GP25, GP19, GP20, GP20, GP20}}    
 
-#define USE_SERIAL
+//#define USE_SERIAL
 #define MASTER_RIGHT
 #define SOFT_SERIAL_PIN GP21
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200 // Timeout window in ms in which the double tap can occur.
 
 
 #define TAPPING_TERM 170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
