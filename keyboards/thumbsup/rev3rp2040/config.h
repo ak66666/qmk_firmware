@@ -1,42 +1,64 @@
+/*
+ * Copyright 2022 Kevin Gee <info@controller.works>
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #pragma once
 
-#define DIRECT_PINS       {{GP15, GP14, GP13, GP12, GP7, GP9}, {GP27, GP26, GP25, GP24, GP8, GP10}, {GP18, GP18, GP18, GP18, GP6, GP11}, {GP0, GP1, GP29, GP28, GP28, GP28}}
-#define DIRECT_PINS_RIGHT {{GP4, GP8, GP2, GP1, GP0, GP22},    {GP3, GP7, GP29, GP28, GP27, GP26},  {GP5, GP6, GP18, GP18, GP18, GP18},  {GP24, GP25, GP19, GP20, GP20, GP20}}    
+#include "config_common.h"
 
-//#define USE_SERIAL
-#define SERIAL_PIO_USE_PIO1 // Force the usage of PIO1 peripheral, by default the Serial implementation uses the PIO0 peripheral
-#define MASTER_RIGHT
-#define SOFT_SERIAL_PIN GP21
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+/* #define DEBOUNCE 5 */
 
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200 // Timeout window in ms in which the double tap can occur.
+#define WS2812_PIO_USE_PIO1
 
+#define SPLIT_TRANSPORT_MIRROR
+#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_LED_STATE_ENABLE
+#define SPLIT_MODS_ENABLE
 
-#define TAPPING_TERM 170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
+//#undef I2C_DRIVER
+//#define I2C_DRIVER I2CD1
+//#undef I2C1_SCL_PIN
+//#define I2C1_SCL_PIN GP25
+//#undef I2C1_SDA_PIN
+//#define I2C1_SDA_PIN GP24
 
+/* #define EE_HANDS  */
+/* #define MASTER_LEFT */
+/* #define MASTER_RIGHT */
 
+/* Top left key on left half */
+//#define BOOTMAGIC_LITE_ROW    0
+//#define BOOTMAGIC_LITE_COLUMN 0
+/* Top right key on right half */
+//#define BOOTMAGIC_LITE_ROW_RIGHT    0
+//#define BOOTMAGIC_LITE_COLUMN_RIGHT 0
+/*
+ * Feature disable options
+ *  These options are also useful to firmware size reduction.
+ */
 
-//#define RETRO_TAPPING
-//#define INGNORE_MOD_TAP_INTERRUPT
-//#undef PERMISSIVE_HOLD                                                                                                  
-//#define  PREVENT_STUCK_MODIFIERS
+/* disable debug print */
+//#define NO_DEBUG
 
+/* disable print */
+//#define NO_PRINT
 
-#define MOUSEKEY_DELAY             150 //200
-#define MOUSEKEY_INTERVAL          60 //50
-#define MOUSEKEY_MAX_SPEED         5  //10
-#define MOUSEKEY_TIME_TO_MAX       7 //20
-#define MOUSEKEY_WHEEL_MAX_SPEED   5	//8
-#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
- 
-
-#define USB_POLLING_INTERVAL_MS 1
-
-
-//#define POINTING_DEVICE_ROTATION_90
-//#define CIRQUE_PINNACLE_TAP_ENABLE
-//#define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
-//#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
-
-//#define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_ABSOLUTE_MODE
+/* disable action features */
+//#define NO_ACTION_LAYER
+//#define NO_ACTION_TAPPING
+//#define NO_ACTION_ONESHOT
 
