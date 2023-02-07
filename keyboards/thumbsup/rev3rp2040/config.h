@@ -39,6 +39,7 @@
 /* #define EE_HANDS  */
 /* #define MASTER_LEFT */
 /* #define MASTER_RIGHT */
+#define SPLIT_HAND_PIN GP18
 
 /* Top left key on left half */
 //#define BOOTMAGIC_LITE_ROW    0
@@ -87,4 +88,5 @@
  
 
 #define USB_POLLING_INTERVAL_MS 1
+
 
