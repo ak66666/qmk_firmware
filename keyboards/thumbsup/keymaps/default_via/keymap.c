@@ -21,18 +21,13 @@ enum layer_names {
     _QWERTY,
     _CURSORRGHT,
     _CURSORLEFT,
-    _NUMBERS,
-    _EXTRARIGHT,
-    _NUMPAD
+    _NUMBERS
 };
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
     QWERTY = SAFE_RANGE,
     NUMPAD,
-    // These three wiil work as RAISE, LOWER  and ADJUST in the original PLANCK
-    CURSORRGHT = LT(_CURSORRGHT,KC_SPC),
-    CURSORLEFT = LT(_CURSORLEFT,KC_SPC),
     NUMBERS
 };
 
@@ -58,9 +53,9 @@ Single hit:		       |      |Space ||Space |      |
  */
 [_QWERTY] = LAYOUT_ortho_4x12( \
   KC_ESC,                  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,       KC_U,    KC_I,    KC_O,   KC_P,    KC_BSPC, \
-  LT(_EXTRARIGHT,KC_TAB),  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,       KC_J,    KC_K,    KC_L,   KC_SCLN, KC_ENT , \
+  KC_TAB, 		   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,       KC_J,    KC_K,    KC_L,   KC_SCLN, KC_ENT , \
   KC_LCTL,                 KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,       KC_N,       KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_RCTL, \
-  XXXXXXX,                 XXXXXXX, KC_LGUI, KC_LALT, KC_LSFT, CURSORLEFT, CURSORRGHT, KC_RSFT, KC_RALT, KC_APP, XXXXXXX, XXXXXXX  \
+  XXXXXXX,                 XXXXXXX, KC_LGUI, KC_LALT, KC_LSFT, KC_SPC,     KC_SPC, KC_RSFT, KC_RALT, KC_APP, XXXXXXX, XXXXXXX  \
 ),
 
 
@@ -153,51 +148,9 @@ without separate thumbcluster.
  */
 [_NUMBERS] = LAYOUT_ortho_4x12( \
   _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
-  LT(_EXTRARIGHT,KC_TAB), KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______, \
+  KC_TAB,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______, \
   _______, KC_F11,  KC_F12,  KC_LALT, KC_LSFT, KC_LALT, KC_RALT, KC_RSFT, KC_COMM, KC_DOT,  KC_SLSH, _______, \
-XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX  \
-),
-
-/* ExtraRightSide (the keys from the right side which did not fit into the matrix)
- * ,-----------------------------------------------------------------------------------.
- * | Esc  |BREAK |      |      |      |      |   `  |   =  |   (  |   )  |   -  |      |
- * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |******|      |      |      |      |      |      |      |      |      |  '   |      |
-   This is the
-   key turning
-   this layer on
- * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |   [  |   ]  |  \   |      |
- * `------+------+------+------+------+------+------+------+------+------+------+------.
- *               |      |      |      |      |      |      |      |      |
- *               `-------------------------------------------------------'
- */
-[_EXTRARIGHT] = LAYOUT_ortho_4x12( \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,        KC_GRV,  KC_EQL,  KC_LPRN, KC_RPRN, KC_MINS, _______, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUOT, _______, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,       XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_BSLS, _______, \
-XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX  \
- 
-),
-
-// TODO: This layer is not working properly, I do not use it anyway. 
-/* Numbers on the home row, and the right side turned into a numpad
- *
- * ,-----------------------------------------------------------------------------------.
- * |      |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  |BackSp|
- * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |      |      |      |   +  |   4  |   5  |   6  |   *  |      |
- * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |LShift| LAlt | RAlt |   1  |   2  |   3  |   \  |      |
- * `------+------+------+------+------+------+------+------+------+------+------+------.
- *               |      |      |      | Exit | Exit |      |   0  |   .  |
- *               `-------------------------------------------------------'
- */
-[_NUMPAD] =  LAYOUT_ortho_4x12( \
-  _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,     KC_7,    KC_8,    KC_9,    KC_0,    _______, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PPLS,  KC_4,    KC_5,    KC_6,    KC_PAST, KC_PENT, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, KC_LSFT, KC_LALT, KC_RALT,  KC_1,    KC_2,    KC_3,    KC_PSLS, _______, \
-  XXXXXXX, XXXXXXX, _______, _______, _______, QWERTY,  QWERTY,   _______, KC_0,    KC_DOT,  XXXXXXX, XXXXXXX \
+  XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX  \
 )
 };
 
@@ -208,69 +161,13 @@ void matrix_init_user() {
 
 void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
-  debug_enable=true;
-  debug_matrix=true;
-  debug_keyboard=true;
+  //debug_enable=true;
+  //debug_matrix=true;
+  //debug_keyboard=true;
   //debug_mouse=true;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
-  switch (keycode) {
-
-
-     case NUMPAD:
-      if (record->event.pressed) {
-	layer_invert(_QWERTY);
-	layer_invert(_NUMPAD);
-      }
-      return false;
-      break;
-
-    case CURSORRGHT:
-      if (record->event.pressed) {
-        layer_on(_CURSORRGHT);
-        update_tri_layer(_CURSORRGHT, _CURSORLEFT, _NUMBERS);
-      } else {
-        layer_off(_CURSORRGHT);
-        update_tri_layer(_CURSORRGHT, _CURSORLEFT, _NUMBERS);
-       }
-      return true;// false;
-      break;
-    case CURSORLEFT:
-      if (record->event.pressed) {
-        layer_on(_CURSORLEFT);
-        update_tri_layer(_CURSORRGHT, _CURSORLEFT, _NUMBERS);
-      } else {
-        layer_off(_CURSORLEFT);
-        update_tri_layer(_CURSORRGHT, _CURSORLEFT, _NUMBERS);
-      }
-      return true;// 	false;
-      break;
-
-
-
-
-
-     case QWERTY:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          PLAY_NOTE_ARRAY(tone_qwerty, false, 0);
-        #endif
-        layer_off(_CURSORRGHT);
-        layer_off(_CURSORLEFT);
-        layer_off(_NUMBERS);
-        layer_off(_EXTRARIGHT);
-        layer_off(_NUMPAD);
-        layer_on(_QWERTY);
-
-        //persistent_default_layer_set(1UL<<_QWERTY);
-        set_single_persistent_default_layer(_QWERTY);
-      }
-      return false;
-      break;
-
-
- }
   return true;
 }
