@@ -2,7 +2,7 @@
 
 
 
-#define TAPPING_TERM 170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
+#define TAPPING_TERM 200 //170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
 
 
 

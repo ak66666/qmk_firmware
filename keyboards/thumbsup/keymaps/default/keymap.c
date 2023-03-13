@@ -177,7 +177,7 @@ without separate thumbcluster.
  * ,-----------------------------------------------------------------------------------.
  * | Esc  |BREAK |PLOVR2|PLOVER|TxBOLT|TxBlt2|   `  |   =  |   (  |   )  |   -  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |******|      |      |      |      |      |      |      |      |      |  '   |      |
+ * |******|      |      |      |      |      |PrtScr|      |      |      |  '   |      |
    This is the
    key turning
    this layer on
@@ -189,7 +189,7 @@ without separate thumbcluster.
  */
 [_EXTRARIGHT] = LAYOUT_ortho_4x12( \
   _______, KC_BRK,  PLOVER2,  PLOVER,  STENO_TXBOLT, STENO_TXBOLT2, KC_GRV,  KC_EQL,  KC_LPRN, KC_RPRN, KC_MINS, _______, \
-  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUOT, _______, \
+  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,       KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUOT, _______, \
   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,       XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_BSLS, _______, \
                     _______, _______, _______, 	    _______,       _______, _______, _______, _______  \
  
