@@ -198,9 +198,9 @@ h * |------+------+------+------+------+-------------+------+------+------+-----
 /* Numbers on the home row, and the right side turned into a numpad
  *
  * ,-----------------------------------------||-----------------------------------------.
- * |  Esc |      |      |      |      |      ||   +  |   7  |   8  |   9  |   /  |BackSp|
+ * |  Esc |      |      |      |      |      ||   /  |   7  |   8  |   9  |   -  |BackSp|
  * |------+------+------+------+------+------||------|------+------+------+------+------|
- * |      |      |      |      |      |      ||   -  |   4  |   5  |   6  |   *  |Enter |
+ * |      |      |      |      |      |      ||   *  |   4  |   5  |   6  |   +  |Enter |
 Hold:
    Extra-Rt 
  * |------+------+------+------+------+------||-------------+------+------+------+------|
@@ -213,8 +213,8 @@ Single hit:		       |      |Space ||Space |      |
 		               +------+------||------+------+
  */
 [_NUMPAD] =  LAYOUT_ortho_4x12( \
-  KC_ESC,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_KP_PLUS,  KC_7,    KC_8, KC_9, KC_KP_SLASH, KC_BSPC, \
-  LT(_EXTRARIGHT,KC_TAB), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_KP_MINUS, KC_4,    KC_5, KC_6, KC_PAST,     KC_PENT, \
+  KC_ESC,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_KP_SLASH, KC_7,    KC_8, KC_9, KC_KP_MINUS, KC_BSPC, \
+  LT(_EXTRARIGHT,KC_TAB), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_KP_PAST,  KC_4,    KC_5, KC_6, KC_KP_PLUS,  KC_PENT, \
   KC_LCTL,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_COMM,     KC_1,    KC_2, KC_3, KC_DOT,      KC_RCTL, \
                                    KC_LGUI, KC_LALT, KC_LSFT, CURSORLEFT, CURSORRGHT,  KC_RSFT, KC_0, KC_DOT                      \
 ),
