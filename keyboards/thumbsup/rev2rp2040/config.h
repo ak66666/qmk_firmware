@@ -1,8 +1,8 @@
 #pragma once
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 700U // Timeout window in ms in which the double tap can occur.
 
-#define TAPPING_TERM 170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
+#define TAPPING_TERM 230 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
 
 
 

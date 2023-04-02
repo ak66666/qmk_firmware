@@ -151,8 +151,8 @@ without separate thumbcluster.
  */
 [_CURSORLEFT] = LAYOUT_ortho_4x12( \
   _______, _______,         _______, _______, _______, _______,       _______, _______,	     _______,      _______,      _______, _______, \
-  _______, KC_BRK,          KC_HOME, KC_UP,   KC_END,  KC_PGUP,       KC_DEL,  KC_WH_U,      KC_MS_U,      KC_WH_D,      KC_GRV,  _______, \
-  KC_ENT,  LCTL(KC_A),      KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,       XXXXXXX, KC_MS_L,      KC_MS_D,      KC_MS_R,      XXXXXXX, KC_DEL, \
+  _______, KC_BRK,          KC_HOME, KC_UP,   KC_END,  KC_PGUP,       KC_DEL,  KC_WH_U,      KC_MS_U,      KC_WH_D,      KC_GRV,  KC_DEL,  \
+  KC_ENT,  LCTL(KC_A),      KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,       XXXXXXX, KC_MS_L,      KC_MS_D,      KC_MS_R,      XXXXXXX, _______, \
   _______, XXXXXXX,         KC_BTN2, KC_BTN3, KC_BTN1, KC_INS,        XXXXXXX, LCTL(KC_DEL), LCTL(KC_INS), LSFT(KC_INS), XXXXXXX, _______, \
     			    _______, _______, _______, _______,       _______, _______,      _______,      _______ 			   \
 
