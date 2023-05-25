@@ -8,7 +8,7 @@
 
 //#define RETRO_TAPPING
 //#define INGNORE_MOD_TAP_INTERRUPT
-//#undef PERMISSIVE_HOLD                                                                                                  
+#define PERMISSIVE_HOLD
 //#define  PREVENT_STUCK_MODIFIERS
 
 

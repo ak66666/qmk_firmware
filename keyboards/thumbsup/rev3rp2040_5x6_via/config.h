@@ -90,3 +90,26 @@
 #define USB_POLLING_INTERVAL_MS 1
 
 
+
+
+
+
+/* key matrix size */
+#define MATRIX_ROWS 10
+#define MATRIX_COLS 6
+
+#define DIRECT_PINS { \
+            {GP19, GP20, GP22, GP23, GP16,  GP17 }, \
+            {GP15, GP14, GP13, GP12, GP8,  GP9 },   \
+            {GP27, GP26, GP25, GP24, GP7,  GP10},   \
+            {GP6,  GP5,  GP4,  GP3,  GP2,  GP11},   \
+            {GP0,  GP1,  GP29, GP28, NO_PIN, NO_PIN} \
+}
+
+#define DIRECT_PINS_RIGHT { \
+	            {GP9, GP23,  GP10, GP11, GP16, GP17}, \
+	            {GP3,  GP6,  GP2,  GP1,  GP0,  GP22}, \
+	            {GP4,  GP8,  GP29, GP28, GP27, GP26}, \
+	            {GP5,  GP7,  GP15, GP14, GP13, GP12}, \
+	            {GP24, GP25, GP19, GP20, NO_PIN, NO_PIN} \
+}
