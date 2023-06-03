@@ -76,11 +76,11 @@ Single hit:   |		       |      |Space ||Space |      |                 |
 
  */
 [_QWERTY] = LAYOUT_ortho_5x12( \
-  KC_GRV,                  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,       KC_6,       KC_7,    KC_8,    KC_9,   KC_0,    KC_DEL,  \
-  KC_ESC,                  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,       KC_U,    KC_I,    KC_O,   KC_P,    KC_BSPC, \
-  LT(_EXTRARIGHT,KC_TAB),  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,       KC_J,    KC_K,    KC_L,   KC_SCLN, KC_ENT,  \
-  KC_LCTL,                 KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,       KC_N,       KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_RCTL, \
-                  	   KC_SPC,  KC_LGUI, KC_LALT, KC_LSFT, CURSORLEFT, CURSORRGHT, KC_RSFT, KC_RALT, KC_APP, KC_SPC            \
+  KC_GRV,                  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,       KC_7,    KC_8,    KC_9,   KC_0,    KC_DEL,  \
+  KC_ESC,                  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,       KC_U,    KC_I,    KC_O,   KC_P,    KC_BSPC, \
+  LT(_EXTRARIGHT,KC_TAB),  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,       KC_J,    KC_K,    KC_L,   KC_SCLN, KC_ENT,  \
+  KC_LCTL,                 KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,       KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_RCTL, \
+                  	   	    KC_LGUI, KC_LALT, KC_LSFT, CURSORLEFT, KC_SPC,  KC_SPC,  CURSORRGHT, KC_RSFT, KC_RALT, KC_APP                    \
 ),
 
 
@@ -131,11 +131,11 @@ without separate thumbcluster.
  *               `-------------------------------------------------------'
  */
 [_CURSORRGHT] = LAYOUT_ortho_5x12( \
-  _______, _______,          _______,      _______,      _______,      _______,             _______,  _______, _______, _______, _______, _______, \
-  _______, KC_BRK,           KC_WH_D,      KC_MS_U,      KC_WH_U,      KC_DEL,              KC_PGUP,  KC_HOME, KC_UP,   KC_END,  KC_GRV,  KC_DEL,  \
-  KC_ENT,  LCTL(KC_A),       KC_MS_L,      KC_MS_D,      KC_MS_R,      XXXXXXX,             KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, _______, \
-  _______, LCTL(KC_Z),       LSFT(KC_DEL), LCTL(KC_INS), LSFT(KC_INS), XXXXXXX,             KC_INS,   KC_BTN1, KC_BTN3, KC_BTN2, XXXXXXX, _______, \
-  	  _______,     	     _______,      _______,      _______,      _______,             _______,  _______, _______, _______, _______           \
+  _______, _______,          _______,      _______,      _______,      _______,                    _______,  _______, _______, _______, _______, _______, \
+  _______, KC_BRK,           KC_WH_D,      KC_MS_U,      KC_WH_U,      KC_DEL,                     KC_PGUP,  KC_HOME, KC_UP,   KC_END,  KC_GRV,  KC_DEL,  \
+  KC_ENT,  LCTL(KC_A),       KC_MS_L,      KC_MS_D,      KC_MS_R,      XXXXXXX,                    KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, _______, \
+  _______, LCTL(KC_Z),       LSFT(KC_DEL), LCTL(KC_INS), LSFT(KC_INS), XXXXXXX,                    KC_INS,   KC_BTN1, KC_BTN3, KC_BTN2, XXXXXXX, _______, \
+    	    		     _______,      _______,      _______,      _______, _______, _______,  _______, _______, _______, _______           \
 ),
 
 
@@ -152,11 +152,11 @@ without separate thumbcluster.
  *               `-------------------------------------------------------'
  */
 [_CURSORLEFT] = LAYOUT_ortho_5x12( \
-  _______, _______,         _______, _______, _______, _______,       _______, _______,	     _______,      _______,      _______, _______, \
-  _______, KC_BRK,          KC_HOME, KC_UP,   KC_END,  KC_PGUP,       KC_DEL,  KC_WH_U,      KC_MS_U,      KC_WH_D,      KC_GRV,  KC_DEL,  \
-  KC_ENT,  LCTL(KC_A),      KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,       XXXXXXX, KC_MS_L,      KC_MS_D,      KC_MS_R,      XXXXXXX, _______, \
-  _______, XXXXXXX,         KC_BTN2, KC_BTN3, KC_BTN1, KC_INS,        XXXXXXX, LCTL(KC_DEL), LCTL(KC_INS), LSFT(KC_INS), XXXXXXX, _______, \
-  	  _______,     	    _______, _______, _______, _______,       _______, _______,      _______,      _______,      _______           \
+  _______, _______,         _______, _______, _______, _______,                   _______, _______,	 _______,      _______,      _______, _______, \
+  _______, KC_BRK,          KC_HOME, KC_UP,   KC_END,  KC_PGUP,                   KC_DEL,  KC_WH_U,      KC_MS_U,      KC_WH_D,      KC_GRV,  KC_DEL,  \
+  KC_ENT,  LCTL(KC_A),      KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,                   XXXXXXX, KC_MS_L,      KC_MS_D,      KC_MS_R,      XXXXXXX, _______, \
+  _______, XXXXXXX,         KC_BTN2, KC_BTN3, KC_BTN1, KC_INS,                    XXXXXXX, LCTL(KC_DEL), LCTL(KC_INS), LSFT(KC_INS), XXXXXXX, _______, \
+  	                    _______, _______, _______, _______, _______, _______, _______, _______,      _______,      _______                         \
 
 ),
 
@@ -250,21 +250,21 @@ All other STENO/PLOVER layers defind below implement the same map with minor var
  */
 
 [_PLOVER] = LAYOUT_ortho_5x12( \
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
-  EXT_PLV, KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   , \
-  XXXXXXX, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
-  XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-           XXXXXXX, XXXXXXX, XXXXXXX, KC_C,    KC_V,    KC_N,    KC_M,    XXXXXXX, XXXXXXX, XXXXXXX           \
+  _______, _______, _______, _______, _______, _______, 		_______, _______, _______, _______, _______, _______, \
+  EXT_PLV, KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    		KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   , \
+  XXXXXXX, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    		KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
+  XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    		KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
+                    XXXXXXX, XXXXXXX, KC_C,    KC_V,	KC_1,	KC_1,	KC_N,    KC_M,    XXXXXXX, XXXXXXX                    \
 ),
 // The same as the one above, but the numbar moved down,
 // and the CTRLs acting as O/E, ESC - as numbar, just want to try them in those positions, 
 // like in the compact steno boards I saw on the internet.
 [_PLOVER2] = LAYOUT_ortho_5x12( \
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
-  EXT_PLV, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
-  XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-  KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   , \
-           XXXXXXX, XXXXXXX, XXXXXXX, KC_C,    KC_V,    KC_N,    KC_M,    XXXXXXX, XXXXXXX, XXXXXXX           \
+  _______, _______, _______, _______, _______, _______,  		_______, _______, _______, _______, _______, _______, \
+  EXT_PLV, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,     		KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
+  XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,     		KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
+  KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,     		KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   , \
+	            XXXXXXX, XXXXXXX, KC_C,    KC_V,    KC_1,	KC_1,	KC_N,    KC_M,    XXXXXXX, XXXXXXX		      \
 ),
 
 /* Plover Layer via TX Bolt interface.
@@ -272,21 +272,21 @@ All other STENO/PLOVER layers defind below implement the same map with minor var
 */
 
 [_STENO_TXBOLT] = LAYOUT_ortho_5x12( \
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,     \
-   EXT_PLV2,STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM,    STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, \
-   STN_SL,  STN_SL,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,    STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,  \
-   STN_SL,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,    STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,  \
-            XXXXXXX, XXXXXXX, XXXXXXX, STN_A,   STN_O,      STN_E,   STN_U,   XXXXXXX, XXXXXXX, XXXXXXX           \
+  _______, _______, _______, _______, _______, _______,  			_______, _______, _______, _______, _______, _______, \
+   EXT_PLV2,STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, 			STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, \
+   STN_SL,  STN_SL,  STN_TL,  STN_PL,  STN_HL,  STN_ST1, 			STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,  \
+   STN_SL,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_ST2, 			STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,  \
+            	     XXXXXXX, XXXXXXX, STN_A,   STN_O,  STN_NUM,       STN_NUM, STN_E,   STN_U,   XXXXXXX, XXXXXXX                    \
  ), 
 
 /*  TX Bolt with the alpha rows moved up, numbar below them. 
 */
 [_STENO_TXBOLT2] = LAYOUT_ortho_5x12( \
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,     \
-   EXT_PLV2,STN_SL,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,    STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,  \
-   STN_SL,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,    STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,  \
-   STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM,    STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, \
-            XXXXXXX, XXXXXXX, XXXXXXX, STN_A,   STN_O,      STN_E,   STN_U,   XXXXXXX, XXXXXXX, XXXXXXX           \
+  _______, _______, _______, _______, _______, _______,			 	_______, _______, _______, _______, _______, _______, \
+   EXT_PLV2,STN_SL,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,    			STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,  \
+   STN_SL,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,    			STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,  \
+   STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM,    			STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, STN_NUM, \
+            	     XXXXXXX, XXXXXXX, STN_A,   STN_O,   STN_NUM,      STN_NUM, STN_E,   STN_U,   XXXXXXX, XXXXXXX                    \
  )
 
 
