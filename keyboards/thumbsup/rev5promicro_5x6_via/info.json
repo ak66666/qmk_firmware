@@ -2,7 +2,7 @@
     "manufacturer": "Alexander (Sasha) Karmanov",
     "keyboard_name": "ThumbsUp! v5",
     "maintainer": "ak66666",
-    "bootloader": "atmel-dfu",
+    "bootloader": "caterina",
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
