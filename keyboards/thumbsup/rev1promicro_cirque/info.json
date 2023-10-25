@@ -67,10 +67,10 @@
                 { "matrix": [2, 11], "x": 11, "y": 2, "label":"RCTRL" },
                 { "matrix": [3, 2], "x": 2, "y": 3, "label":"WIN" },
                 { "matrix": [3, 3], "x": 3, "y": 3, "label":"LALT" },
-                { "matrix": [3, 4], "x": 4, "y": 3, "label":"LSHIFT" },
                 { "matrix": [3, 5], "x": 5, "y": 3, "label":"RAISE" },
-                { "matrix": [3, 6], "x": 6, "y": 3, "label":"LOWER" },
+                { "matrix": [3, 4], "x": 4, "y": 3, "label":"LSHIFT" },
                 { "matrix": [3, 7], "x": 7, "y": 3, "label":"RSHIFT" },
+                { "matrix": [3, 6], "x": 6, "y": 3, "label":"LOWER" },
                 { "matrix": [3, 8], "x": 8, "y": 3, "label":"RALT" },
                 { "matrix": [3, 9], "x": 9, "y": 3, "label":"MENU" }
             ]
