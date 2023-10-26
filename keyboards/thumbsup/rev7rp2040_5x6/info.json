@@ -1,7 +1,7 @@
 {
     "manufacturer": "Alexander (Sasha) Karmanov",
-    "keyboard_name": "Thumbs Up! v3 Split 5x6",
-    "maintainer": "ak66666",
+    "keyboard_name": "ThumbsUp! v7",
+    "maintainer": "u/ak66666",
     "bootloader": "rp2040",
     "features": {
        "bootmagic": false,
@@ -13,11 +13,11 @@
         "nkro": true
     },
     "processor": "RP2040",
-    "url": "",
+    "url": "https://www.thumbsup.shop/product-page/thumbs-up-v7-split-rp2040-5x6-mx-3-key-thumb-cluster-multiple-options",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0000",
-        "vid": "0xFEED"
+        "pid": "0x0070",
+        "vid": "0x5361"
     },
   "matrix_pins": {
         "direct": [
