@@ -90,3 +90,5 @@
 #define USB_POLLING_INTERVAL_MS 1
 
 
+//The number of layers for VIA/REMAP
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
