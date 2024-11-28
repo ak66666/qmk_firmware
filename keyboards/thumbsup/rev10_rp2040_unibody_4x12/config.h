@@ -6,7 +6,7 @@
 #define TAPPING_TERM 150 //170 //170 // 200 //120 //00 //90 //200 // how long before a tap becomes a hold
 
 //#define PERMISSIVE_HOLD                                                                                                  
-#define HOLD_ON_OTHER_KEY_PRESS
+//#define HOLD_ON_OTHER_KEY_PRESS
 
 
 #define MOUSEKEY_DELAY             150 //200
