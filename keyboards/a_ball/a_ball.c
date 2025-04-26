@@ -37,12 +37,6 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     if (trackball_hand == TRACKBALL_HAND_LEFT) {
         mouse_report.x = mouse_report.x;
         mouse_report.y = -mouse_report.y;
-//	if (mouse_report.buttons) {
-//	        // swap left & right buttons
-//	        bool needs_left       = mouse_report.buttons & (1 << POINTING_DEVICE_BUTTON2);
-//		bool needs_right      = mouse_report.buttons & (1 << POINTING_DEVICE_BUTTON1);
-//	 	mouse_report.buttons = (mouse_report.buttons & ~((1 << POINTING_DEVICE_BUTTON1) | (1 << POINTING_DEVICE_BUTTON2))) | (needs_left << POINTING_DEVICE_BUTTON1) | (needs_right << POINTING_DEVICE_BUTTON2);
-//	 } 
     } else {
         mouse_report.x = -mouse_report.x;
         mouse_report.y = mouse_report.y;
