@@ -18,14 +18,14 @@
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
-    _PLOVER,
-    _STENO_TXBOLT
+    _STENO_TXBOLT,
+    _PLOVER
 };
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-    PLOVER,
-    STENO_TXBOLT
+    STENO_TXBOLT,
+    PLOVER
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -38,17 +38,15 @@ All other STENO/PLOVER layers defind below implement the same map with minor var
 	- TX Bolt protocol over COM port is used instead of acting as a regular keyboard.
         - NumBar keys are moved below the alpha-keys.
 
- * ,-----------------------------------------------------------------------------------.
- * | EXIT |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |
- * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | xxxx |   S  |   T  |   P  |   H  |   *  |   *  |   F  |   P  |   L  |   T  |   D  |
- * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | xxxx |   S  |   K  |   W  |   R  |   *  |   *  |   R  |   B  |   G  |   S  |   Z  |
- * +------+------+------+------+------+------+------+------+------+------+------+------+
-		 | xxxx | xxxx |      |      ||      |      | xxxx| xxx  |
- 	         +------+------+      |      ||      |      +-----+------+               
-  		               |   A  |   O  ||   E  |   U  |
-		               +------+------||------+------+
+ * ,-----------------------------------------. .-----------------------------------------.
+ * | EXIT |   #  |   #  |   #  |   #  |   #  | |   #  |   #  |   #  |   #  |   #  |   #  |
+ * |------+------+------+------+------+------| |------+------+------+------+------+------|
+ * |  #   |   S  |   T  |   P  |   H  |      | |      |   F  |   P  |   L  |   T  |   D  |
+ * |------+------+------+------+------|   *  | |   *  |------+------+------+------+------|
+ * |  #   |   S  |   K  |   W  |   R  |      | |      |   R  |   B  |   G  |   S  |   Z  |
+ * +------+------+------+------+------+------+ |------+------+------+------+------+------+
+  		               |   A  |   O  | |   E  |   U  |
+		               +------+------+ +------+------+
  */
 
 [_PLOVER] = LAYOUT_ortho_3x12( \
@@ -62,7 +60,7 @@ All other STENO/PLOVER layers defind below implement the same map with minor var
 
 [_STENO_TXBOLT] = LAYOUT_ortho_3x12( \
    STN_NUM,  STN_SL,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,                  STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,  \
-   STN_NUM,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_A,  STN_O,    STN_E,  STN_U,  STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR  \
+   STN_NUM,  STN_SL,  STN_KL,  STN_WL,  STN_RL,  STN_A,  STN_O,    STN_E,  STN_U,   STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR  
  )
  
 };

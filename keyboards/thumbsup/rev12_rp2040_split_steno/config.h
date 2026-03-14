@@ -29,10 +29,10 @@
 //#undef I2C1_SDA_PIN
 //#define I2C1_SDA_PIN GP24
 
-// #define EE_HANDS
-#define MASTER_LEFT
-/* #define MASTER_RIGHT */
-/* #define SPLIT_HAND_PIN GP18*/
+//#define EE_HANDS
+//#define MASTER_LEFT
+//#define MASTER_RIGHT
+#define SPLIT_HAND_PIN GP4
 
 /* Top left key on left half */
 //#define BOOTMAGIC_LITE_ROW    0
@@ -52,6 +52,27 @@
 //#define MOUSEKEY_WHEEL_MAX_SPEED   5	//8
 //#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
  
+//#define POINTING_DEVICE_ROTATION_270
+#define POINTING_DEVICE_INVERT_X_RIGHT
+#define POINTING_DEVICE_INVERT_Y_RIGHT	
+
+#define CIRQUE_PINNACLE_TAP_ENABLE
+// Circular scroll
+// Isn't it making the cursor jittering?
+#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
+//#define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_RELATIVE_MODE
+#define CIRQUE_PINNACLE_POSITION_MODE CIRQUE_PINNACLE_ABSOLUTE_MODE
+
+#define I2C_DRIVER I2CD1
+#define I2C1_SDA_PIN GP2
+#define I2C1_SCL_PIN GP3
+
+//from ...\keyboards\bastardkb\dilemma\3x5_2\splinky 
+#undef RP_I2C_USE_I2C1
+#define RP_I2C_USE_I2C1 TRUE
+
+#define SPLIT_POINTING_ENABLE
+#define POINTING_DEVICE_COMBINED
 
 #define USB_POLLING_INTERVAL_MS 1
 
